@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website Audit | RoundUp Roofing</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.agnav a.ext{opacity:.8}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./" class="on">Audit</a><a href="competitors.html">Competitors</a><a href="https://andrei170.github.io/roundup-roofing-demo/" class="ext" target="_blank" rel="noopener">Concept Site &#8599;</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Lead Audit &middot; RoundUp Roofing LLC &middot; Dallas, Texas</div>
+    <div class="sub">Prepared for Willie &middot; 21 September 2026 &middot; AG1 Consulting</div>
+    <h1>Every Lead Form On Your Website Is Served From A Concrete Company In Brownsville.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:50px">10/10</div>
+        <div class="score100">of your pages load their form from another company's domain</div>
+      </div>
+      <div class="heroread">
+        <h2>Your "Get A Free Quote" box is an embedded frame pulled from brownsvilleconcretecontractor.com &mdash; a live concrete business roughly 550 miles south of Dallas.</h2>
+        <p>It works today. <b>It is on all ten of your pages, and you do not control the domain it comes from.</b> If that
+        address is ever switched off, changed or allowed to lapse, every quote form on your site stops working and nothing
+        on your end will tell you.</p>
+        <div class="tag">Every page of rounduproofing.com read on 21 September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; The Exact Thing We Found</div>
+    <div class="code">
+On all ten pages of rounduproofing.com, the quote form is an iframe:
+
+  <span class="ph">https://secure.brownsvilleconcretecontractor.com/widget/form/iZl3VYtxETlNVhiUEbzU</span>
+
+That domain resolves to a live, unrelated business:
+
+  <span class="ph">"Brownsville Concrete Contractor | Concrete Services in Brownsville, TX"</span>
+
+The widget itself is a <span class="ok">GoHighLevel</span> form (LeadConnector).
+The form loads and returns a page, so it is <span class="ok">working right now</span>.
+
+Pages carrying it:  <span class="ph">index, about-us, commercial-roofing, contact-us,</span>
+                    <span class="ph">general-construction, metal-roofing, recent-projects,</span>
+                    <span class="ph">roof-repair-leaks, shingle-roofing, tile-roofing</span>
+    </div>
+    <div class="flag">
+      <div class="lab">What this is, and what we are not saying</div>
+      <p>This is what a white-label setup looks like when one agency builds several sites and points them all at a single
+      account domain. <b>We are not saying anybody has done anything wrong, and we cannot see where your submissions
+      actually go</b> &mdash; that is not visible from outside.</p>
+      <p>What we can say is this: <b>the front door to your business sits on an address registered to somebody else's
+      company.</b> For a business that wants five to ten more jobs a month, that is the wrong thing to be renting.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; Nothing On Your Site Is Measured. At All.</div>
+    <div class="code">
+Tracking found across all ten pages:
+
+  Google Analytics (GA4)   <span class="ph">not found</span>
+  Google Tag Manager       <span class="ph">not found</span>
+  Google Ads tag           <span class="ph">not found</span>
+  Meta pixel               <span class="ph">not found</span>
+  Any gtag() call          <span class="ph">not found &mdash; zero across all ten pages</span>
+  Call tracking            <span class="ph">not found</span>
+    </div>
+    <div class="warn">
+      <div class="lab">This is the finding that costs you the most, and it is invisible</div>
+      <p>You told us the work comes from referrals and from your door-knocker, and that the D2D has been good. <b>Here is
+      the problem: you cannot prove any of that, and neither can you prove the opposite.</b></p>
+      <p>When a homeowner gets knocked on Tuesday, looks you up Thursday and calls Friday, <b>that is a D2D lead that
+      looks like a phone call out of nowhere.</b> Your website is almost certainly already closing work for you and there
+      is no way to see it. Equally, if the site is doing nothing, you are the last person who would find out.</p>
+      <p><b>Every competitor we checked is measuring. You are the only one flying blind.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; Dallas Is A Hail Market, And You Are Not Set Up To Catch A Storm</div>
+    <div class="win">
+      <div class="lab">What your own site already gets right</div>
+      <ul>
+        <li><b>You talk about storms.</b> Storm and hail damage appear throughout the site &mdash; that is the correct
+        message for this market.</li>
+        <li><b>Your page titles are genuinely well written.</b> "Metal Roofing in Dallas, TX | Roundup Roofing" is
+        exactly the right shape, on all ten pages. Most firms your size get this wrong.</li>
+        <li><b>Your phone number is tappable</b> and your service area names Fort Worth, Plano, Irving, Garland, Frisco,
+        McKinney, Arlington, Denton, Richardson and Mesquite.</li>
+      </ul>
+    </div>
+    <div class="flag">
+      <div class="lab">And the part that does not work</div>
+      <p>Roofing demand in Dallas does not arrive evenly &mdash; it arrives in spikes, days after a storm. <b>The firms
+      that win those weeks are the ones already carrying a pixel, already retargeting, and already able to put a message
+      in front of the neighbourhood that just got hit.</b></p>
+      <p>With no pixel and no analytics, <b>you cannot advertise to anyone who has already visited your site, and you
+      cannot target the streets that took the damage.</b> A storm comes, your competitors switch on, and you are back to
+      knocking doors one at a time.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 4 &mdash; The Proof You Have Is Not Doing Any Work</div>
+    <div class="code">
+  Testimonial on the homepage     <span class="ok">yes</span>  &mdash; and it is a good one
+  Customer name attached to it    <span class="ph">none</span>
+  Star rating shown               <span class="ok">"5.0 Star Rating"</span>
+  Number of reviews shown         <span class="ph">not stated anywhere</span>
+  Manufacturer certification      <span class="ph">none found</span>
+                                  (no GAF, Owens Corning or CertainTeed badge)
+  Financing offered               <span class="ph">not mentioned</span>
+  Years stated                    <span class="ok">"15+ Years Of Experience"</span>
+    </div>
+    <div class="warn">
+      <div class="lab">An unnamed testimonial reads as a stock quote, even when it is real</div>
+      <p>The review on your homepage sounds like a genuine customer &mdash; the detail about the crew explaining the work
+      and cleaning up is exactly what a real person says. <b>But with no name under it, a careful homeowner discounts
+      it.</b> A first name, a suburb and a date costs nothing and changes how it reads.</p>
+      <p>Every Dallas competitor we checked publishes a manufacturer certification and a financing option. <b>Those two
+      things are what a homeowner comparing three quotes actually looks for on a $15,000 decision.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 5 &mdash; Two Of Your Photographs Come From Somewhere Else</div>
+    <div class="code">
+Two images served live from rounduproofing.com:
+
+  <span class="ph">/images/6-Common-Causes-of-Roof-Leaks---Graves-Brothers1200-&times;-800.png</span>
+      on your home page, about-us page and roof-repair-leaks page
+      <span class="ph">"Graves Brothers" is a different roofing company.</span>
+
+  <span class="ph">/images/Concrete-curb-repair-Dallas-Texas.webp</span>
+      on your home page and about-us page
+      <span class="ph">A concrete curb repair photo, on a roofing website.</span>
+
+Both return HTTP 200 and are on the live site today.
+    </div>
+    <div class="warn">
+      <div class="lab">This is the same fingerprint as the form</div>
+      <p>A graphic named after another roofing firm and a concrete repair photo, sitting alongside a quote form framed
+      from a concrete contractor's domain. <b>These are not separate problems. They are one builder reusing whatever was
+      to hand across several sites.</b></p>
+      <p>The filenames are visible to anyone who looks, and the concrete photo is visible to every customer. <b>Your own
+      job photos are the single cheapest fix on this list</b> &mdash; you are a roofer with fifteen years of work behind
+      you and you are showing somebody else's kerb.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 6 &mdash; Ten Cities Named, Not One Page For Any Of Them</div>
+    <div class="code">
+  Pages on the site:                 <span class="ok">10</span>  (all service or company pages)
+  Pages targeting a specific city:   <span class="ph">0</span>
+
+  Cities named in your copy:
+    Fort Worth, Plano, Irving, Garland, Frisco, McKinney,
+    Arlington, Denton, Richardson, Mesquite
+
+  sitemap.xml    <span class="ph">404 &mdash; not published</span>
+  robots.txt     <span class="ph">404 &mdash; not published</span>
+    </div>
+    <div class="flag">
+      <div class="lab">You have done the hard part and stopped one step short</div>
+      <p>Naming those ten cities is right. <b>But somebody in Frisco searching "roof repair Frisco" is not going to land
+      on a page about Dallas</b> &mdash; and one competitor we checked publishes 258 pages against your ten.</p>
+      <p>The missing sitemap and robots file are smaller, but they are the two files that tell Google what you have. Both
+      are quick.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Scorecard</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Who owns your lead capture</div><div class="sc">Form framed from another company's domain</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Measurement</div><div class="sc">No analytics, tag manager or pixel anywhere</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Retargeting ability</div><div class="sc">No pixel &mdash; cannot reach past visitors</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">City coverage</div><div class="sc">10 cities named, 0 pages for them</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Sitemap and robots</div><div class="sc">Both return 404</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Proof on the page</div><div class="sc">Testimonial present but unnamed; no cert shown</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Site size</div><div class="sc">10 pages against a competitor's 258</div></div><div class="badge gC">C</div></div>
+      <div class="row"><div><div class="rname">Page titles</div><div class="sc">Well written, city and service on every page</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Storm positioning</div><div class="sc">Right message for a hail market</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">The business itself</div><div class="sc">15+ years, referrals and D2D both producing</div></div><div class="badge gA">A</div></div>
+    </div>
+    <div class="tag" style="margin-top:12px">This is not a bad website. It is a decent website with no instruments on it and its front door on somebody else's address.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Move the form onto your own domain and put the meter on.</b> Your own lead capture, GA4, a Meta pixel and
+      call tracking. First job, and until it is done nothing else can be judged.</li>
+      <li><b>Find out what your door-knocker is actually worth.</b> Once tracking is live you can see the knock-to-search
+      pattern instead of guessing, and pay him against something real.</li>
+      <li><b>Build the city pages</b> for the ten suburbs you already name, so Frisco and Plano searches land somewhere
+      that mentions Frisco and Plano.</li>
+      <li><b>Put your proof on the page</b> &mdash; named reviews, a review count, any manufacturer certification you
+      hold, and whether you offer financing.</li>
+      <li><b>Then get ready for storms.</b> With a pixel running you can be in front of a hit neighbourhood within days,
+      which is the difference between five extra jobs and fifteen.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>One man knocking doors is a real channel. It is also a channel with a ceiling and no receipt.</h2>
+    <p>Five to ten more jobs a month needs a second channel that can be measured, and a front door you own.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 21 September 2026<br><br>
+    For Willie, RoundUp Roofing LLC, Dallas, Texas. <b>Every statement about the website was read directly from
+    rounduproofing.com's own served pages on 21 September 2026</b> &mdash; the ten pages and their titles, the iframe
+    embedding a form widget from the domain secure.brownsvilleconcretecontractor.com on all ten of them, the identification
+    of that widget as a GoHighLevel/LeadConnector form, the absence of any analytics, tag manager, advertising tag, pixel
+    or gtag call across all ten pages, the 404 responses for sitemap.xml and robots.txt, the tappable telephone number, the
+    unnamed testimonial and "5.0 Star Rating" text, the "15+ Years Of Experience" claim and the cities named in the
+    copy &mdash; all of which are reproducible. <b>The image filenames are quoted exactly as served and the inference that they originate elsewhere is drawn from those filenames alone; we make no claim about any rights, permissions or arrangements relating to them.</b> <b>The description of brownsvilleconcretecontractor.com as a live,
+    unrelated concrete business is taken from that site's own published page title on the same date.</b> <b>We make no
+    claim about where form submissions are delivered, who controls that domain, what commercial arrangement exists between
+    any parties, or whether anyone has acted improperly &mdash; none of that is visible from outside and none of it is
+    alleged.</b> Competitor page counts, tracking codes, certifications and financing offers were read from those firms'
+    own served pages and sitemaps on the same date; items recorded as "not found" describe what our check returned and must
+    not be read as proof of absence, and content loaded by JavaScript after rendering may not appear in a static read.
+    Statements about Dallas hail frequency are general market observations, not measurements of any storm or any effect on
+    this business. The referral and door-to-door channels, the desire for five to ten more jobs a month and the years in
+    business are as reported to AG1 and have not been independently verified. <b>No enquiry volume, call volume, job
+    count, ranking, cost per lead or revenue outcome is forecast or promised anywhere in this document</b>, and no claim
+    whatsoever is made or implied about the licensing, registration, insurance, certification or workmanship of this or any
+    other business. Nothing here is legal, insurance or business advice. Company, platform and product names are used for
+    identification only and belong to their respective owners. The grades are AG1's own editorial assessment.
+  </div>
+</footer>
+</body></html>
